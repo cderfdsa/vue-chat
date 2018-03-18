@@ -39,9 +39,9 @@ export default {
       if (this.name === '') {
         return;
       }
-      this.$store.commit('changeName', this.name);
-      localStorage.name = this.name;
-      this.$router.push('Chatting');
+//      this.$store.commit('changeName', this.name);
+      localStorage.name = '张三';
+      this.$router.push('AI');
     },
     showAbout() {
       this.$store.commit('showAbout', true);

@@ -25,8 +25,8 @@ const store = new Vuex.Store({
   state: {
     name: '',
     // avatarUrl: `https://icdn.microzz.com/20170426_vue_chat/icon-avatar${Vue.prototype.random(21)}.svg`,
-    avatarUrl: `http://omratag7g.bkt.clouddn.com/icon-avatar${Vue.prototype.random(21)}.svg`,
-    addr: '未知',
+    avatarUrl: `./gen.svg`,
+    addr: '',
     isShowAbout: false
   },
 

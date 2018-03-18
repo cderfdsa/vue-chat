@@ -9,7 +9,16 @@ Vue.use(Router)
 const router = new Router({
   routes: [
     {
+      path: '',
+     redirect:'/AI'
+    },
+    {
       path: '/',
+      name: 'AI1',
+      component: AI,
+    },
+    {
+      path: '/login',
       name: 'Login',
       component: Login
     },

@@ -121,28 +121,28 @@ export default {
     this.oContent.scrollTop = this.oContent.scrollHeight;
     this.oTextarea = document.querySelector('textarea');
 
-    socket.emit('online', this.$store.state.name);
+//    socket.emit('online', this.$store.state.name);
 
-    socket.on('online', (name) => {
-      if (!name) {
-        return;
-      }
-      let oOnline = document.createElement('div');
-      oOnline.className = 'online';
-      oOnline.innerText = name + '上线了';
-      this.oContent.appendChild(oOnline);
-      this.oContent.scrollTop = this.oContent.scrollHeight;
-
-
-    });
+//    socket.on('online', (name) => {
+//      if (!name) {
+//        return;
+//      }
+//      let oOnline = document.createElement('div');
+//      oOnline.className = 'online';
+//      oOnline.innerText = name + '上线了';
+//      this.oContent.appendChild(oOnline);
+//      this.oContent.scrollTop = this.oContent.scrollHeight;
+//
+//
+//    });
 
     // 接收群聊消息
-    socket.on('receiveGroupMsg', data => {
-      this.msgs.push(data);
-      setTimeout(() => {
-        this.oContent.scrollTop = this.oContent.scrollHeight;
-      }, 0);
-    });
+//    socket.on('receiveGroupMsg', data => {
+//      this.msgs.push(data);
+//      setTimeout(() => {
+//        this.oContent.scrollTop = this.oContent.scrollHeight;
+//      }, 0);
+//    });
 
     this.oContent.scrollTop = this.oContent.scrollHeight;
   },
@@ -152,13 +152,13 @@ export default {
       if (this.inputContent === '') {
         return;
       } else {
-        socket.emit('sendGroupMsg', {
-          date: this.moment().format('YYYY-MM-DD HH:mm:ss'),
-          loc: localStorage.addr,
-          from: `${localStorage.name}`,
-          content: this.inputContent,
-          avatarUrl: this.avatarUrl
-        });
+//        socket.emit('sendGroupMsg', {
+//          date: this.moment().format('YYYY-MM-DD HH:mm:ss'),
+//          loc: localStorage.addr,
+//          from: `${localStorage.name}`,
+//          content: this.inputContent,
+//          avatarUrl: this.avatarUrl
+//        });
         this.msgs.push({
           date: this.moment().format('YYYY-MM-DD HH:mm:ss'),
           loc: localStorage.addr,
